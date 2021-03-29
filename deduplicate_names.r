@@ -1,3 +1,5 @@
+library(readr)
+
 # TPT_Siphonaptera_treasure_clean <- read_csv("~/GitHub/ixodes-tpt/output/TPT_Siphonaptera_treasure_clean.csv")
 # df <- TPT_Siphonaptera_treasure_clean
 df$dupe_dataset <- NA # create the new column for dupe data set info
@@ -168,7 +170,7 @@ source_summary$unique_names <- c(BYU, FMNH, NMNH, TOTAL)# create column in sourc
 
 write.csv(df,"~/GitHub/ixodes-tpt/output/TPT_Siphonaptera.csv", row.names = FALSE) # write out final list
 write.csv(duplicates,"~/GitHub/ixodes-tpt/output/TPT_Siphonaptera_duplicates.csv", row.names = FALSE) # write out file of duplicates removed
-write.csv(need_expert_review,"~/GitHub/ixodes-tpt/output/TPT_Siphonaptera_duplicates.csv", row.names = FALSE) # write out file of removed for review
+write.csv(need_expert_review,"~/GitHub/ixodes-tpt/output/need_expert_review.csv", row.names = FALSE) # write out file of removed for review
 write.csv(source_summary,"~/GitHub/ixodes-tpt/output/Siphonaptera_sources.csv", row.names = FALSE) # write out reconciliation
 
 print("proceed to levenshtein distance name matching")

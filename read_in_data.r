@@ -1,5 +1,7 @@
 # Read in my files
 library(readxl)
+library(readr)
+
 BYU_Siphonaptera_Synonyms <- read_excel("~/GitHub/ixodes-tpt/input/BYU Siphonaptera Synonyms.xlsx", 
                                           +     sheet = "Siphonaptera BYU Syn DwC full")
 BYU_Siphonaptera <- read_excel("~/GitHub/ixodes-tpt/input/BYU Siphonaptera.xlsx", 
