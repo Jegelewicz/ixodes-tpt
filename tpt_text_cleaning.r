@@ -31,7 +31,9 @@ for(i in 1:ncol(df)) {
             grepl('tptdataset', tolower(name), perl = TRUE) | 
             grepl('scientific', tolower(name), perl = TRUE) |
             grepl('accepted', tolower(name), perl = TRUE) | 
-            grepl('canonical', tolower(name), perl = TRUE)) {
+            grepl('canonical', tolower(name), perl = TRUE) |
+            grepl('remark', tolower(name), perl = TRUE) |
+            grepl('TPTdataset', tolower(name), perl = TRUE)) {
   } else {
     df[,i] <- sapply(df[,i], toproper)
   }
